@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DocGonzo Labs</title>
+<meta name="description" content="Free web tools for color, paper and print: Chroma Lab, Journal Lab and Cover Lab.">
+<meta name="theme-color" content="#f3f5f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101317" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314171d'/%3E%3Ctext x='32' y='42' font-family='system-ui,sans-serif' font-size='28' font-weight='800' fill='%2353c3df' text-anchor='middle'%3EDG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --paper:#f3f5f7; --surface:#ffffff; --ink:#14171d; --muted:#5a6270;
+    --line:#dce0e6; --accent:#0a6883; --accent-soft:#e2f0f4;
+    --shadow:0 1px 2px rgba(20,23,29,.06),0 4px 14px rgba(20,23,29,.06);
+    --f-body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --f-display:"Bricolage Grotesque","Avenir Next",system-ui,sans-serif;
+    color-scheme:light dark;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --paper:#101317; --surface:#191d23; --ink:#eceef2; --muted:#9ba3ae;
+      --line:#2a2f37; --accent:#53c3df; --accent-soft:#16313a;
+      --shadow:0 1px 2px rgba(0,0,0,.5);
+    }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:var(--paper); color:var(--ink);
+    font:16px/1.55 var(--f-body);
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:56px 20px 40px}
+  header{margin-bottom:36px}
+  .mark{
+    display:inline-flex;align-items:center;gap:10px;
+    font:800 15px/1 var(--f-display);letter-spacing:.02em;color:var(--muted);
+    text-transform:uppercase;
+  }
+  .mark span{
+    display:grid;place-items:center;width:34px;height:34px;border-radius:9px;
+    background:var(--ink);color:var(--paper);font-size:13px;letter-spacing:0;
+  }
+  h1{
+    font:800 clamp(2.4rem,7vw,3.6rem)/1.02 var(--f-display);
+    letter-spacing:-.02em;margin:18px 0 12px;
+  }
+  .lede{font-size:1.125rem;color:var(--muted);max-width:34em;margin:0}
+  .apps{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .app{
+    display:flex;flex-direction:column;gap:12px;
+    background:var(--surface);border:1px solid var(--line);border-radius:16px;
+    padding:20px;box-shadow:var(--shadow);
+    color:inherit;text-decoration:none;
+    transition:transform .15s ease,border-color .15s ease;
+  }
+  .app:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .app:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+  .app img{width:56px;height:56px;border-radius:13px;background:var(--accent-soft)}
+  .app h2{font:600 1.35rem/1.15 var(--f-display);margin:0}
+  .app p{margin:0;color:var(--muted)}
+  .open{margin-top:auto;font-weight:600;color:var(--accent)}
+  footer{
+    margin-top:44px;padding-top:20px;border-top:1px solid var(--line);
+    color:var(--muted);font-size:.9rem;display:flex;flex-wrap:wrap;gap:8px 20px;
+  }
+  footer a{color:inherit}
+  @media (prefers-reduced-motion:reduce){.app{transition:none}.app:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mark"><span>DG</span>DocGonzo Labs</div>
+    <h1>Small tools for color, paper and print.</h1>
+    <p class="lede">Free web apps that run in your browser. Install any of them to your phone's home screen and they work offline.</p>
+  </header>
+
+  <main class="apps">
+    <a class="app" href="/Chroma-Lab/">
+      <img src="/Chroma-Lab/icons/icon-192.png" alt="" width="56" height="56">
+      <h2>Chroma Lab</h2>
+      <p>Color palettes from real photos, or pulled from your own, with HEX, RGB, HSL and CMYK codes.</p>
+      <span class="open">Open Chroma Lab</span>
+    </a>
+    <a class="app" href="/Journal-Lab/">
+      <img src="/Journal-Lab/icons/icon-192.png" alt="" width="56" height="56">
+      <h2>Journal Lab</h2>
+      <p>Printable dot grid, ruled, planner and tracker pages at any size, laid out with cut marks.</p>
+      <span class="open">Open Journal Lab</span>
+    </a>
+    <a class="app" href="/Journal-Lab/cover-lab/">
+      <img src="/Journal-Lab/cover-lab/icons/icon-192.png" alt="" width="56" height="56">
+      <h2>Cover Lab</h2>
+      <p>Generative abstract art covers for notebooks at real print sizes, saved as PNG or PDF.</p>
+      <span class="open">Open Cover Lab</span>
+    </a>
+  </main>
+
+  <footer>
+    <span>© DocGonzo Labs</span>
+    <a href="https://github.com/DocGonzo420">Code on GitHub</a>
+  </footer>
+</div>
+</body>
+</html>
